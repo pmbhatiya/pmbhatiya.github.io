@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+	<title>New Project</title>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 400px;fill: #4285f4;font-weight: 400;font-family: "Electrolize-Regular", "Electrolize" } 
+	</style>
+	<text id="PM " style="transform: matrix(1,0,0,1,-12,340)" >
+		<tspan x="0" y="0" class="txt0">PM</tspan>
+	</text>
+</svg>
