@@ -27,19 +27,50 @@
     <title>Paresh Bhatiya | Senior Software Engineer</title>
     <link rel="stylesheet" href="./static/css/style.css" type="text/css" />
     <style>
-      .pill { display: inline-block; border: 1px solid #ddd; border-radius: 999px; padding: 6px 12px; margin: 4px 6px; font-size: 15px; background: #fafafa; }
+      :root {
+        --bg: #f7f9fc;
+        --text: #222;
+        --muted: #666;
+        --border: #e6e8ec;
+        --brand: #234764;
+        --brand-dark: #1a3550;
+        --pill-bg: #fafafa;
+        --card-shadow: 0 8px 24px rgba(0,0,0,.06);
+      }
+
+      body { background: var(--bg); color: var(--text); }
+      div.container { width: 100% !important; max-width: 980px; margin: 48px auto; padding: 24px 24px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--card-shadow); }
+      div.body { width: auto !important; }
+      img.align-left { border-radius: 12px; box-shadow: var(--card-shadow); }
+
       .section { margin: 36px 0; }
-      .subtle { color: #666; }
-      .cta-bar { margin: 16px 0 0 0; }
-      .cta { display: inline-block; border: 1px solid #234764; color: #234764; padding: 8px 14px; border-radius: 6px; margin-right: 10px; }
-      .cta.primary { background: #234764; color: #fff; }
-      .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-      .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; background: #fff; }
+      .section h2 { font-family: 'Noticia Text', serif; position: relative; padding-bottom: 6px; }
+      .section h2:after { content: ""; position: absolute; left: 0; bottom: 0; width: 56px; height: 3px; background: var(--brand); border-radius: 3px; }
+
+      .pill { display: inline-block; border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; margin: 4px 6px; font-size: 15px; background: var(--pill-bg); }
+      .subtle { color: var(--muted); }
       .muted { color: #888; font-style: italic; }
+
+      .cta-bar { margin: 16px 0 0 0; }
+      .cta { display: inline-block; border: 1px solid var(--brand); color: var(--brand); padding: 8px 14px; border-radius: 8px; margin-right: 10px; transition: all .18s ease; background: #fff; }
+      .cta:hover { box-shadow: var(--card-shadow); transform: translateY(-1px); }
+      .cta.primary { background: var(--brand); color: #fff; }
+      .cta.primary:hover { background: var(--brand-dark); }
+
+      .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+      .card { border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: #fff; box-shadow: var(--card-shadow); }
+      .section .card + .card { margin-top: 16px; }
       .kpis { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
-      .kpi { border: 1px solid #ddd; border-radius: 10px; padding: 10px 14px; background: #fff; min-width: 120px; text-align: center; }
-      .nav-link { color: #234764; }
-      @media (min-width: 900px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+      .kpi { border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; background: #fff; min-width: 160px; text-align: center; box-shadow: var(--card-shadow); }
+
+      .nav-link { color: var(--brand); padding-bottom: 2px; border-bottom: 2px solid transparent; transition: border-color .18s ease, color .18s ease; }
+      .nav-link:hover { color: var(--brand-dark); border-bottom-color: var(--brand-dark); }
+      a:focus-visible { outline: 3px solid rgba(35,71,100,.3); outline-offset: 2px; border-radius: 6px; }
+
+      @media (min-width: 900px) {
+        .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+        .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+      }
     </style>
   </head>
   <body>
